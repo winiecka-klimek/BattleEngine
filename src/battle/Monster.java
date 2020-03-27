@@ -21,9 +21,10 @@ public class Monster {
         return attack;
     }
 
-    public double getRandomNumber() {
-        Random random = new Random(2);
-        return randomNumber + random.nextDouble();
+    public double getRandomNumber(int min, int max) {
+        Random random = new Random();
+        randomNumber = min + (max-min)* random.nextDouble();
+        return randomNumber;
     }
 }
 

@@ -20,7 +20,7 @@ public class World {
 
             for (Monster m : this.monsters) {
                 for (Victim v : this.victims) {
-                    if (m.getRandomNumber()< v.escapeChance()) {
+                    if (m.getRandomNumber(0,1)< v.escapeChance()) {
                         System.out.printf("%s ran away from monster %s\n", v.getName(), m.getName());
                         continue;
                     }
